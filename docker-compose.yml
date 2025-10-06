@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg17-trixie
+    container_name: agentic-coding-postgres
+    environment:
+      POSTGRES_DB: agentic_coding_dev
+      POSTGRES_USER: dev_user
+      POSTGRES_PASSWORD: dev_password
+    ports:
+      - "5432:5432"
